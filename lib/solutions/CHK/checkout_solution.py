@@ -60,11 +60,9 @@ def checkout(skus):
                 remainderAfter3 = remainder % 3
             
                 total = (divisibleBy3 * 130) + remainderAfter3 * prices[key]
-                print(total)
                 totalPrice += total
 
             total = (divisible * 200) 
-            print(total)
             totalPrice += total
             continue
 
@@ -94,6 +92,7 @@ def checkout(skus):
 
     
     
+
 
 
 
