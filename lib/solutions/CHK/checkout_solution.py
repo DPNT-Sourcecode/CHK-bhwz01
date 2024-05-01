@@ -101,14 +101,15 @@ def checkout(skus):
         itemsInGroup = []
         for _ in range(3):
             item = heapq.heappop(maxHeap)[1]
-            items.append(item)
+            itemsInGroup.append(item)
+
+        for item in itemsInGroup:
+            basketCount[item] -= 1
+        
+        totalPrice += 45
 
 
     for key in basketCount.keys():
-        
-        # we dealt with group items earlier
-        if key in groupItems:
-            continue
 
         itemFreqBasket = basketCount[key]
 
@@ -259,6 +260,7 @@ def checkout(skus):
 
     
     
+
 
 
 
