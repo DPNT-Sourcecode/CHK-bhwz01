@@ -3,8 +3,15 @@
 # skus = unicode string
 def checkout(skus):
 
-    if not isinstance(skus, str) and not str(skus).isalpha() and not str(skus).isupper():
+    if not isinstance(skus, str):
         return -1
+    
+    if len(skus) == 0:
+        return 0
+    
+    if not skus.isalpha() or not skus.isupper():
+        return -1
+
     
     prices = {"A": 50, "B": 30, "C": 20, "D": 15}
 
@@ -44,6 +51,7 @@ def checkout(skus):
 
     
     
+
 
 
 
