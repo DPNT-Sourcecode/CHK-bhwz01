@@ -191,7 +191,7 @@ def checkout(skus):
 
             remainder = itemFreqBasket % 2
 
-            total = (divisible * 150) + remainder * prices[key]
+            total = (divisible * 120) + remainder * prices[key]
             totalPrice += total
             continue
 
@@ -260,6 +260,7 @@ def checkout(skus):
 
     
     
+
 
 
 
