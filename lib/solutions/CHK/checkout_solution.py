@@ -13,7 +13,7 @@ def checkout(skus):
         return -1
 
     
-    prices = {"A": 50, "B": 30, "C": 20, "D": 15}
+    prices = {"A": 50, "B": 30, "C": 20, "D": 15, "E": 40}
 
     basketCount = {"A": 0, "B": 0, "C": 0, "D": 0}
 
@@ -68,6 +68,7 @@ def checkout(skus):
 
     
     
+
 
 
 
