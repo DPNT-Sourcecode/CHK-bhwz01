@@ -84,7 +84,6 @@ def checkout(skus):
             totalPrice += total
             continue
         
-        
         if key == "B" and (itemFreqBasket // 2) > 0:
             # if the user has ordered at least 2 items  
             divisible = itemFreqBasket // 2
@@ -94,7 +93,6 @@ def checkout(skus):
             total = (divisible * 45) + remainder * prices[key]
             totalPrice += total
             continue
-
 
         if key == "F" and (itemFreqBasket // 3) > 0:
             # if the user has order a multiple 3 items of type F
@@ -107,6 +105,43 @@ def checkout(skus):
 
             continue
 
+        if key == "H" and (itemFreqBasket // 10) > 0:
+            divisible = itemFreqBasket // 10
+            remainder = itemFreqBasket % 10
+            total = 0
+            # deal with if the remainder is >= 5
+            if (remainder // 5) > 0:
+                divisibleBy5 = remainder // 5
+                remainderAfter5 = remainder % 5
+            
+                total = (divisibleBy5 * 45) + remainderAfter5 * prices[key]
+                totalPrice += total
+            else:
+                # case where remainder isnt >= 5
+                totalPrice += remainder * prices[key]
+
+            total = (divisible * 80) 
+            totalPrice += total
+            continue
+
+        elif key == "F" and (itemFreqBasket // 5) > 0:
+            divisible = itemFreqBasket // 5
+            remainder = itemFreqBasket % 5
+        
+            total = (divisible * 45) + remainder * prices[key]
+            totalPrice += total
+            continue
+
+        if key == "K" and (itemFreqBasket // 2) > 0:
+            # if the user has ordered at least 2 items  
+            divisible = itemFreqBasket // 2
+
+            remainder = itemFreqBasket % 2
+
+            total = (divisible * 150) + remainder * prices[key]
+            totalPrice += total
+            continue
+
         
         totalPrice += (prices[key] * itemFreqBasket)
 
@@ -115,6 +150,7 @@ def checkout(skus):
 
     
     
+
 
 
 
