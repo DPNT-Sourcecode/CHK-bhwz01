@@ -21,6 +21,3 @@ class TestSum():
             sum_solution.compute(100, 101)
         
 
-
-
-

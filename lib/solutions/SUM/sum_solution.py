@@ -22,5 +22,3 @@ def compute(x, y):
 
 
 
-
-
