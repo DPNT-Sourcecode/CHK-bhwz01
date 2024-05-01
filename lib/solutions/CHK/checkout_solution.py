@@ -25,7 +25,6 @@ def checkout(skus):
                 "S": 0, "T": 0, "U": 0, "V": 0, "W": 0, "X": 0,
                 "Y": 0, "Z": 0}
     
-    groupSet = {"S", "T", "X", "Y", "Z"}
 
     for sku in skus:
         if sku in prices:
@@ -77,6 +76,12 @@ def checkout(skus):
         while offer_count > 0 and basketCount["Q"] > 0:
             basketCount["Q"] -= 1
             offer_count -= 1
+
+    
+    groupSet = {"S", "T", "X", "Y", "Z"}
+
+    # with groupset we have to be careful to only reduce the ones which are not sitting on an offer
+    
 
 
     for key in basketCount.keys():
@@ -229,6 +234,7 @@ def checkout(skus):
 
     
     
+
 
 
 
