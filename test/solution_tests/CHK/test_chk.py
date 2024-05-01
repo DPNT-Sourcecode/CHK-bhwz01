@@ -47,6 +47,8 @@ class TestChk():
 
         assert checkout_solution.checkout("RRRQ") == 150
 
+        assert checkout_solution.checkout("ABCDEFGHIJKLMNOPQRSTUVWXYZ") == 965
+
 
 
  
@@ -54,5 +56,6 @@ class TestChk():
 
     
         
+
 
 

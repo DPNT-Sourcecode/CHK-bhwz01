@@ -62,7 +62,6 @@ def checkout(skus):
 
         while offer_count > 0 and basketCount["M"] > 0:
             basketCount["M"] -= 1
-
             offer_count -= 1
     
     if (basketCount["R"] // 3) > 0:
@@ -73,9 +72,7 @@ def checkout(skus):
         offer_count = rFrequency // 3
 
         while offer_count > 0 and basketCount["Q"] > 0:
-            
             basketCount["Q"] -= 1
-
             offer_count -= 1
 
 
@@ -228,6 +225,7 @@ def checkout(skus):
 
     
     
+
 
 
 
