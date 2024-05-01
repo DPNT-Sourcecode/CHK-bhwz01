@@ -131,14 +131,6 @@ def checkout(skus):
             totalPrice += total
             continue
 
-        elif key == "F" and (itemFreqBasket // 5) > 0:
-            divisible = itemFreqBasket // 5
-            remainder = itemFreqBasket % 5
-        
-            total = (divisible * 45) + remainder * prices[key]
-            totalPrice += total
-            continue
-
         if key == "K" and (itemFreqBasket // 2) > 0:
             # if the user has ordered at least 2 items  
             divisible = itemFreqBasket // 2
@@ -199,24 +191,34 @@ def checkout(skus):
             totalPrice += (prices[key] * itemFreqBasket)
             continue
         
-        if key == "V" and (itemFreqBasket // 10) > 0:
-            divisible = itemFreqBasket // 10
-            remainder = itemFreqBasket % 10
+        if key == "V" and (itemFreqBasket // 3) > 0:
+            divisible = itemFreqBasket // 3
+            remainder = itemFreqBasket % 3
             total = 0
-            # deal with if the remainder is >= 5
-            if (remainder // 5) > 0:
-                divisibleBy5 = remainder // 5
-                remainderAfter5 = remainder % 5
+            # deal with if the remainder is >= 2
+            if (remainder // 2) > 0:
+                divisibleBy2 = remainder // 2
+                remainderAfter2 = remainder % 2
             
-                total = (divisibleBy5 * 45) + remainderAfter5 * prices[key]
+                total = (divisibleBy2 * 90) + remainderAfter2 * prices[key]
                 totalPrice += total
             else:
-                # case where remainder isnt >= 5
+                # case where remainder isnt >= 2
                 totalPrice += remainder * prices[key]
 
-            total = (divisible * 80) 
+            total = (divisible * 130) 
             totalPrice += total
             continue
+
+        elif key == "V" and (itemFreqBasket // 2) > 0:
+            divisible = itemFreqBasket // 2
+            remainder = itemFreqBasket % 2
+        
+            total = (divisible * 90) + remainder * prices[key]
+            totalPrice += total
+            continue
+
+
         
         totalPrice += (prices[key] * itemFreqBasket)
 
@@ -225,6 +227,7 @@ def checkout(skus):
 
     
     
+
 
 
 
