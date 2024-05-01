@@ -61,6 +61,15 @@ def checkout(skus):
         offer_count = nFrequency // 4
 
         basketCount["M"] -= offer_count
+    
+    if (basketCount["R"] // 4) > 0:
+        # if the user has order a multiple 4 items of type R
+        # 3R get one Q free
+        # number of times the offer can be applied 
+        rFrequency = basketCount["R"]
+        offer_count = rFrequency // 4
+
+        basketCount["Q"] -= offer_count
 
 
     for key in basketCount.keys():
@@ -111,9 +120,6 @@ def checkout(skus):
             offer_count = itemFreqBasket // 3
 
             itemFreqBasket -= offer_count
-            totalPrice += (prices[key] * itemFreqBasket)
-
-            continue
 
         if key == "H" and (itemFreqBasket // 10) > 0:
             divisible = itemFreqBasket // 10
@@ -171,16 +177,6 @@ def checkout(skus):
             totalPrice += total
             continue
         
-        if key == "R" and (itemFreqBasket // 3) > 0:
-            # if the user has order a multiple 4 items of type F
-            # 3R get one R free
-            # number of times the offer can be applied 
-            offer_count = itemFreqBasket // 3
-
-            itemFreqBasket -= offer_count
-            totalPrice += (prices[key] * itemFreqBasket)
-            continue
-        
         if key == "U" and (itemFreqBasket // 4) > 0:
             # if the user has order a multiple 4 items of type U
             # 3U get one U free
@@ -227,6 +223,7 @@ def checkout(skus):
 
     
     
+
 
 
 
