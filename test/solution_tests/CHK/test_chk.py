@@ -25,6 +25,8 @@ class TestChk():
         # in this case we want to take away two BS
         assert checkout_solution.checkout("ABBBBBBEEEE") == 300
 
+        assert checkout_solution.checkout("AAAAAAAA") == 330
+
 
 
 
@@ -33,8 +35,4 @@ class TestChk():
 
     
         
-
-
-
-
 

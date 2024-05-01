@@ -47,14 +47,13 @@ def checkout(skus):
             freeBs -= 1
 
 
-
     for key in basketCount.keys():
         itemFreqBasket = basketCount[key]
 
         if key == "A" and (itemFreqBasket // 5) > 0:
             divisible = itemFreqBasket // 5
             remainder = itemFreqBasket % 5
-            
+            total = 0
             # deal with if the remainder is >= 3
             if (remainder // 3) > 0:
                 divisibleBy3 = remainder // 3
@@ -93,11 +92,6 @@ def checkout(skus):
 
     
     
-
-
-
-
-
 
 
 
