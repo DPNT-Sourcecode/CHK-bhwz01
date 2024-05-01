@@ -15,7 +15,7 @@ def checkout(skus):
     
     prices = {"A": 50, "B": 30, "C": 20, "D": 15, "E": 40}
 
-    basketCount = {"A": 0, "B": 0, "C": 0, "D": 0}
+    basketCount = {"A": 0, "B": 0, "C": 0, "D": 0, "E": 0}
 
     for sku in skus:
         if sku in prices:
@@ -36,6 +36,7 @@ def checkout(skus):
         # if the frequency of B is 0 already that is fine
         if Bfrequency != 0 and Bfrequency % 2 != 0:
             basketCount["B"] -= 1
+
 
 
     for key in basketCount.keys():
@@ -83,6 +84,7 @@ def checkout(skus):
 
     
     
+
 
 
 
