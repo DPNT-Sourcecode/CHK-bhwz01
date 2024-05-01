@@ -79,11 +79,15 @@ def checkout(skus):
             offer_count -= 1
 
     
-    groupDict = {"S":20, "T":20, "X":17, "Y":20, "Z":21}
+    groupPrices = {"S":20, "T":20, "X":17, "Y":20, "Z":21}
 
     # with groupset we want to get rid of the most expensive items (favour the customer)
 
-    max
+    maxHeap = [(-1 * price, item) for item, price in groupPrices.items()]
+
+    heapq.heapify(maxHeap)
+
+    print(maxHeap)
 
     for key in basketCount.keys():
         itemFreqBasket = basketCount[key]
@@ -235,6 +239,7 @@ def checkout(skus):
 
     
     
+
 
 
 
