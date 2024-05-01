@@ -3,7 +3,7 @@
 # skus = unicode string
 def checkout(skus):
 
-    if not isinstance(skus, str):
+    if not isinstance(skus, str) and not str(skus).isalpha() and not str(skus).isupper():
         return -1
     
     prices = {"A": 50, "B": 30, "C": 20, "D": 15}
@@ -30,10 +30,8 @@ def checkout(skus):
         if key == "B" and (itemFreqBasket // 2) > 0:
             # if the user has ordered at least 2 items  
             divisible = itemFreqBasket // 2
-            print(divisible, "\n")
 
             remainder = itemFreqBasket % 2
-            print(remainder, "\n")
 
             total = (divisible * 45) + remainder * prices[key]
             totalPrice += total
@@ -46,6 +44,7 @@ def checkout(skus):
 
     
     
+
 
 
 
