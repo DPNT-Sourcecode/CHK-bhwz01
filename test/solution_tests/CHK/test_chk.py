@@ -23,7 +23,7 @@ class TestChk():
 
         # case where we have multiple pairs of Es. For every pair of E we perhaps may take away one B
         # in this case we want to take away two BS
-        assert checkout_solution.checkout("ABBBBBBEEEE") == 205
+        assert checkout_solution.checkout("ABBBBBBEEEE") == 300
 
 
 
@@ -33,6 +33,7 @@ class TestChk():
 
     
         
+
 
 
 
