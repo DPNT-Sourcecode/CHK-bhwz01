@@ -30,7 +30,7 @@ def checkout(skus):
 
         EFrequency = basketCount["E"]
 
-        freeBs = EFrequency % 2
+        freeBs = EFrequency // 2
 
         print(freeBs)
         while freeBs > 0:
@@ -93,6 +93,7 @@ def checkout(skus):
 
     
     
+
 
 
 
