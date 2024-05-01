@@ -13,9 +13,9 @@ def checkout(skus):
         return -1
 
     
-    prices = {"A": 50, "B": 30, "C": 20, "D": 15, "E": 40}
+    prices = {"A": 50, "B": 30, "C": 20, "D": 15, "E": 40, "F": 10}
 
-    basketCount = {"A": 0, "B": 0, "C": 0, "D": 0, "E": 0}
+    basketCount = {"A": 0, "B": 0, "C": 0, "D": 0, "E": 0, "F": 0}
 
     for sku in skus:
         if sku in prices:
@@ -95,6 +95,7 @@ def checkout(skus):
 
     
     
+
 
 
 
