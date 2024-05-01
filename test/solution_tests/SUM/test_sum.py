@@ -13,7 +13,14 @@ class TestSum():
 
         with pytest.raises(ValueError):
             sum_solution.compute(-13, -5)
+
+        with pytest.raises(ValueError):
+            sum_solution.compute(101, 100)
         
+        with pytest.raises(ValueError):
+            sum_solution.compute(100, 101)
         
+
+
 
 

@@ -12,10 +12,14 @@ def compute(x, y):
     
     except ValueError as e:
         print(e.args)
+        raise e
     except ArithmeticError as e:
         print(e.args)
+        raise e
     except Exception as e:
         print(e.args)
+        raise e
+
 
 
 
