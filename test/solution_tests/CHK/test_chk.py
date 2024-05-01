@@ -3,8 +3,9 @@ import pytest
 
 class TestChk():
     def test_chk(self):
-        assert checkout_solution.compute("ABBBBCD") == 245
+        assert checkout_solution.checkout("ABBBBBCD") == 205
 
     
         
+
 
