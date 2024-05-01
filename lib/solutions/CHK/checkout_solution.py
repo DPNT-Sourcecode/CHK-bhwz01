@@ -184,8 +184,6 @@ def checkout(skus):
             offer_count = itemFreqBasket // 4
 
             itemFreqBasket -= offer_count
-            totalPrice += (prices[key] * itemFreqBasket)
-            continue
         
         if key == "V" and (itemFreqBasket // 3) > 0:
             divisible = itemFreqBasket // 3
@@ -223,6 +221,7 @@ def checkout(skus):
 
     
     
+
 
 
 
