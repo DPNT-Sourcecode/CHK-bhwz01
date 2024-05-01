@@ -54,22 +54,29 @@ def checkout(skus):
 
 
     if (basketCount["N"] // 3) > 0:
-        # if the user has order a multiple 4 items of type N
+        # if the user has order a multiple 3 items of type N
         # 3N get one M free
         # number of times the offer can be applied 
         nFrequency = basketCount["N"]
-        offer_count = nFrequency // 4
+        offer_count = nFrequency // 3
 
-        basketCount["M"] -= offer_count
+        while offer_count > 0 and basketCount["M"] > 0:
+            basketCount["M"] -= 1
+
+            offer_count -= 1
     
     if (basketCount["R"] // 3) > 0:
-        # if the user has order a multiple 4 items of type R
+        # if the user has order a multiple 3 items of type R
         # 3R get one Q free
         # number of times the offer can be applied 
         rFrequency = basketCount["R"]
-        offer_count = rFrequency // 4
+        offer_count = rFrequency // 3
 
-        basketCount["Q"] -= offer_count
+        while offer_count > 0 and basketCount["Q"] > 0:
+            
+            basketCount["Q"] -= 1
+
+            offer_count -= 1
 
 
     for key in basketCount.keys():
@@ -221,6 +228,7 @@ def checkout(skus):
 
     
     
+
 
 
 
