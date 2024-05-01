@@ -78,10 +78,12 @@ def checkout(skus):
             offer_count -= 1
 
     
-    groupSet = {"S", "T", "X", "Y", "Z"}
+    groupDict = {"S":20, "T":20, "X":17, "Y":20, "Z":21}
 
-    # with groupset we have to be careful to only reduce the ones which are not sitting on an offer
-    
+    # with groupset we want to get rid of the most expensive items (favour the customer)
+
+
+    sortedItems = sorted(prices)
 
 
     for key in basketCount.keys():
@@ -234,6 +236,7 @@ def checkout(skus):
 
     
     
+
 
 
 
