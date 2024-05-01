@@ -26,13 +26,30 @@ def checkout(skus):
     for key in basketCount.keys():
         itemFreqBasket = basketCount[key]
 
-        if key == "A" and (itemFreqBasket // 3) > 0:
+        if key == "A" and (itemFreqBasket // 5) > 0:
+            divisible = itemFreqBasket // 5
+            remainder = itemFreqBasket % 5
+            
+            # deal with if the remainder is >= 3
+            if (remainder // 3) > 0:
+                divisibleBy3 = remainder // 3
+                remainderAfter3 = remainder % 3
+            
+                total = (divisibleBy3 * 130) + remainderAfter3 * prices[key]
+                totalPrice += total
+
+            total = (divisible * 200) + remainder * prices[key]
+            totalPrice += total
+            continue
+
+        elif key == "A" and (itemFreqBasket // 3) > 0:
             divisible = itemFreqBasket // 3
             remainder = itemFreqBasket % 3
-
+        
             total = (divisible * 130) + remainder * prices[key]
             totalPrice += total
             continue
+        
         
         if key == "B" and (itemFreqBasket // 2) > 0:
             # if the user has ordered at least 2 items  
@@ -51,6 +68,7 @@ def checkout(skus):
 
     
     
+
 
 
 
