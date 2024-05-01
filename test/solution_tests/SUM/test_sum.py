@@ -6,5 +6,3 @@ class TestSum():
         assert sum_solution.compute(1, 2) == 3
 
         assert sum_solution
-
-
