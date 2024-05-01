@@ -23,6 +23,21 @@ def checkout(skus):
 
     totalPrice = 0
 
+    # deal with if the customer has bought two 'E's
+
+    # check if we can apply special offer E
+    if basketCount["E"] >= 2:
+
+        # check if we should apply special offer E
+        Bfrequency = basketCount["B"]
+    
+        # we only want to apply special offer E if we are not a multiple of 2 for B
+        # i.e. B would not be getting it's offer
+        # if the frequency of B is 0 already that is fine
+        if Bfrequency != 0 and Bfrequency % 2 != 0:
+            basketCount["B"] -= 1
+
+
     for key in basketCount.keys():
         itemFreqBasket = basketCount[key]
 
@@ -68,6 +83,7 @@ def checkout(skus):
 
     
     
+
 
 
 
