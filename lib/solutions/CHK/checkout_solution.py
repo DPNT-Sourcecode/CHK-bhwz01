@@ -21,7 +21,7 @@ def checkout(skus):
 
         if key == "A" and (itemFreqBasket // 3) > 0:
             divisible = itemFreqBasket // 3
-            remainder = itemFreqBasket - divisible
+            remainder = itemFreqBasket % 3
 
             total = (divisible * 130) + remainder * prices[key]
             totalPrice += total
@@ -30,7 +30,10 @@ def checkout(skus):
         if key == "B" and (itemFreqBasket // 2) > 0:
             # if the user has ordered at least 2 items  
             divisible = itemFreqBasket // 2
-            remainder = itemFreqBasket - divisible
+            print(divisible, "\n")
+
+            remainder = itemFreqBasket % 2
+            print(remainder, "\n")
 
             total = (divisible * 45) + remainder * prices[key]
             totalPrice += total
@@ -43,6 +46,7 @@ def checkout(skus):
 
     
     
+
 
 
 

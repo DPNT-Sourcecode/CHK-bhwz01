@@ -5,7 +5,13 @@ class TestChk():
     def test_chk(self):
         assert checkout_solution.checkout("ABBBBBCD") == 205
 
+        assert checkout_solution.checkout("") == 0
+
+        assert checkout_solution.checkout("AAABBCCDD") == 243
+
+
     
         
+
 
 
