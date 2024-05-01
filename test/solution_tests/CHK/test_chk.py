@@ -49,11 +49,12 @@ class TestChk():
 
         # assert checkout_solution.checkout("ABCDEFGHIJKLMNOPQRSTUVWXYZ") == 965
 
-
+        assert checkout_solution.checkout("STXYZXXZ") == 965
 
  
 
 
     
         
+
 

@@ -50,7 +50,6 @@ def checkout(skus):
             # if the frequency of B is 0 already that is fine
             # and (Bfrequency % 2 != 0 or freeBs > 1)
             if Bfrequency != 0:
-                print("deleting")
                 basketCount["B"] -= 1
             
             freeBs -= 1
@@ -93,8 +92,11 @@ def checkout(skus):
         if basketCount[item] > 0:
             itemFreq = basketCount[item]
             for i in range(itemFreq):
+                print("Here")
                 # max-heap in python, so we negate values
                 heapq.heappush(-1 * maxHeap, (prices[item], item))
+    
+    print(maxHeap[0])
     
     # while len(maxHeap) >= 3:
 
@@ -256,6 +258,7 @@ def checkout(skus):
 
     
     
+
 
 
 
