@@ -16,10 +16,10 @@ class TestChk():
         assert checkout_solution.checkout(34.5) == -1
 
         # ensuring that we DO NOT give the free B away
-        assert checkout_solution.checkout("ABBBBBBEEE") == 205
+        assert checkout_solution.checkout("ABBBBBBEEE") == 305
 
         # ensuring that we DO give the free B away
-        assert checkout_solution.checkout("ABBBBBBEEE") == 205
+        assert checkout_solution.checkout("ABBBBBEEE") == 260
 
         # # case where we have multiple pairs of Es. For every pair of E we perhaps may take away one B
         # assert checkout_solution.checkout("ABBBBBBEEEE") == 205
@@ -32,5 +32,6 @@ class TestChk():
 
     
         
+
 
 
