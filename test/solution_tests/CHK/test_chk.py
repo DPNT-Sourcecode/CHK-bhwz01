@@ -42,6 +42,9 @@ class TestChk():
         # multiple of 3 Fs in basket (8)
         assert checkout_solution.checkout("FFFFFFFF") == 60
 
+        # mix with Fs in basket (8)
+        assert checkout_solution.checkout("ABBFFFFFFFF") == 155
+
 
 
 
@@ -50,6 +53,7 @@ class TestChk():
 
     
         
+
 
 
 
