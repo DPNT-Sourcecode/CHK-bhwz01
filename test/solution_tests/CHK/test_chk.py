@@ -30,6 +30,13 @@ class TestChk():
         
         assert checkout_solution.checkout("AAAAAA") == 250
 
+        # exactly 3 Fs in basket
+        assert checkout_solution.checkout("AAAAAAFFF") == 270
+
+        # multiple of 3 Fs in basket (6)
+        assert checkout_solution.checkout("AAAAAAFFFFFF") == 290
+
+
 
 
  
@@ -37,6 +44,7 @@ class TestChk():
 
     
         
+
 
 
 
