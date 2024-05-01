@@ -32,15 +32,14 @@ def checkout(skus):
 
         freeBs = EFrequency // 2
 
-        print(freeBs)
         while freeBs > 0:
         # check if we should apply special offer E
             Bfrequency = basketCount["B"]
         
-            # we only want to apply special offer E if we are not a multiple of 2 for B
-            # i.e. B would not be getting it's offer
+            # we only want to apply special offer E if we haven't reached a frequency of 0 for B
             # if the frequency of B is 0 already that is fine
-            if Bfrequency != 0 and (Bfrequency % 2 != 0 or freeBs > 1):
+            # and (Bfrequency % 2 != 0 or freeBs > 1)
+            if Bfrequency != 0:
                 print("deleting")
                 basketCount["B"] -= 1
             
@@ -92,6 +91,7 @@ def checkout(skus):
 
     
     
+
 
 
 
