@@ -28,14 +28,19 @@ def checkout(skus):
     # check if we can apply special offer E
     if basketCount["E"] >= 2:
 
+        EFrequency = basketCount["E"]
+
+        iterations = EFrequency % 2
+
+        for i in range(iterations):
         # check if we should apply special offer E
-        Bfrequency = basketCount["B"]
-    
-        # we only want to apply special offer E if we are not a multiple of 2 for B
-        # i.e. B would not be getting it's offer
-        # if the frequency of B is 0 already that is fine
-        if Bfrequency != 0 and Bfrequency % 2 != 0:
-            basketCount["B"] -= 1
+            Bfrequency = basketCount["B"]
+        
+            # we only want to apply special offer E if we are not a multiple of 2 for B
+            # i.e. B would not be getting it's offer
+            # if the frequency of B is 0 already that is fine
+            if Bfrequency != 0 and Bfrequency % 2 != 0:
+                basketCount["B"] -= 1
 
 
 
@@ -84,6 +89,7 @@ def checkout(skus):
 
     
     
+
 
 
 
