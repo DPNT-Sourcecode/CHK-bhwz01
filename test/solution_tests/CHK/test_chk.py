@@ -45,6 +45,7 @@ class TestChk():
         # mix with Fs in basket (8)
         assert checkout_solution.checkout("ABBFFFFFFFF") == 155
 
+        assert checkout_solution.checkout("RRRQ") == 150
 
 
 
@@ -53,4 +54,5 @@ class TestChk():
 
     
         
+
 
