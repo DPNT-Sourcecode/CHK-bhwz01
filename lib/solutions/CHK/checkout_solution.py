@@ -1,3 +1,4 @@
+import heapq
 
 # noinspection PyUnusedLocal
 # skus = unicode string
@@ -82,9 +83,7 @@ def checkout(skus):
 
     # with groupset we want to get rid of the most expensive items (favour the customer)
 
-
-    sortedItems = sorted(prices)
-
+    max
 
     for key in basketCount.keys():
         itemFreqBasket = basketCount[key]
@@ -236,6 +235,7 @@ def checkout(skus):
 
     
     
+
 
 
 
