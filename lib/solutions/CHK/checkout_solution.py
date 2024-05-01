@@ -30,9 +30,9 @@ def checkout(skus):
 
         EFrequency = basketCount["E"]
 
-        iterations = EFrequency % 2
+        freeBs = EFrequency % 2
 
-        for i in range(iterations):
+        for _ in range(freeBs):
         # check if we should apply special offer E
             Bfrequency = basketCount["B"]
         
@@ -89,6 +89,7 @@ def checkout(skus):
 
     
     
+
 
 
 
