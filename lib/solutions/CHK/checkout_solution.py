@@ -142,6 +142,26 @@ def checkout(skus):
             totalPrice += total
             continue
 
+        if key == "N" and (itemFreqBasket // 4) > 0:
+            # if the user has order a multiple 4 items of type F
+            # 3N get one M free
+            # number of times the offer can be applied 
+            offer_count = itemFreqBasket // 4
+
+            itemFreqBasket -= offer_count
+            totalPrice += (prices[key] * itemFreqBasket)
+            continue
+
+        if key == "P" and (itemFreqBasket // 5) > 0:
+            # if the user has ordered at least 5 items  
+            divisible = itemFreqBasket // 2
+
+            remainder = itemFreqBasket % 2
+
+            total = (divisible * 200) + remainder * prices[key]
+            totalPrice += total
+            continue
+
         
         totalPrice += (prices[key] * itemFreqBasket)
 
@@ -150,9 +170,6 @@ def checkout(skus):
 
     
     
-
-
-
 
 
 
