@@ -79,17 +79,34 @@ def checkout(skus):
             offer_count -= 1
 
     
-    groupPrices = {"S":20, "T":20, "X":17, "Y":20, "Z":21}
+    groupItems = {"S", "T", "X", "Y", "Z"}
 
     # with groupset we want to get rid of the most expensive items (favour the customer)
+    # so let's make a max heap containing all items in this group offer,  we will use the
+    # price as the value which maintains order
 
-    maxHeap = [(-1 * price, item) for item, price in groupPrices.items()]
-
+    maxHeap = []
     heapq.heapify(maxHeap)
+
+    # push all items from the user's basket which in this group offer, onto the heap
+    for item in groupItems:
+        if basketCount[item] > 0:
+            itemFreq = basketCount[item]
+            for i in range(itemFreq):
+                # max-heap in python, so we negate values
+                heapq.heappush(-1 * maxHeap, (prices[item], item))
+    
+    # while len(maxHeap) >= 3:
+
 
     print(maxHeap)
 
     for key in basketCount.keys():
+        
+        # we dealt with group items earlier
+        if key in groupItems:
+            continue
+
         itemFreqBasket = basketCount[key]
 
         if key == "A" and (itemFreqBasket // 5) > 0:
@@ -239,11 +256,6 @@ def checkout(skus):
 
     
     
-
-
-
-
-
 
 
 
