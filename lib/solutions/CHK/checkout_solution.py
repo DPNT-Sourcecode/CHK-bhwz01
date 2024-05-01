@@ -94,14 +94,15 @@ def checkout(skus):
             for i in range(itemFreq):
                 print("Here")
                 # max-heap in python, so we negate values
-                heapq.heappush(-1 * maxHeap, (prices[item], item))
+                heapq.heappush(maxHeap, (-1 * prices[item], item))
     
-    print(maxHeap[0])
-    
-    # while len(maxHeap) >= 3:
+    while len(maxHeap) >= 3:
+        
+        itemsInGroup = []
+        for _ in range(3):
+            item = heapq.heappop(maxHeap)[1]
+            items.append(item)
 
-
-    print(maxHeap)
 
     for key in basketCount.keys():
         
@@ -258,6 +259,7 @@ def checkout(skus):
 
     
     
+
 
 
 
