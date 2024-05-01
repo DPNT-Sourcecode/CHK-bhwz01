@@ -27,6 +27,8 @@ class TestChk():
         assert checkout_solution.checkout("AAAAAAAAA") == 380
 
         assert checkout_solution.checkout("ABCDEABCDE") == 280
+        
+        assert checkout_solution.checkout("AAAAAA") == 250
 
 
 
@@ -35,6 +37,7 @@ class TestChk():
 
     
         
+
 
 
 

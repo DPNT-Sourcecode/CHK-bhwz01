@@ -60,6 +60,10 @@ def checkout(skus):
             
                 total = (divisibleBy3 * 130) + remainderAfter3 * prices[key]
                 totalPrice += total
+            else:
+                # case where remainder isnt >= 3
+                totalPrice += remainder * prices[key]
+
 
             total = (divisible * 200) 
             totalPrice += total
@@ -91,6 +95,7 @@ def checkout(skus):
 
     
     
+
 
 
 
