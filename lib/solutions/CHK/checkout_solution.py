@@ -24,6 +24,9 @@ def checkout(skus):
                 "M": 0, "N": 0, "O": 0, "P": 0, "Q": 0, "R": 0,
                 "S": 0, "T": 0, "U": 0, "V": 0, "W": 0, "X": 0,
                 "Y": 0, "Z": 0}
+    
+    groupSet = {"S", "T", "X", "Y", "Z"}
+
     for sku in skus:
         if sku in prices:
             basketCount[sku] += 1
@@ -215,6 +218,7 @@ def checkout(skus):
             total = (divisible * 90) + remainder * prices[key]
             totalPrice += total
             continue
+        
 
 
         
@@ -225,6 +229,7 @@ def checkout(skus):
 
     
     
+
 
 
 
